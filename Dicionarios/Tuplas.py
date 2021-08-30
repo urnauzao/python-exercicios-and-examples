@@ -1,5 +1,5 @@
 usuarios = {} #lista
-emails  = ["xpto@xyz.com", "xkcd@phd.com", "tester@teste.com"] #diciário
+emails  = ["xpto@xyz.com", "xkcd@phd.com", "tester@teste.com"] #dicionário
 
 tupla = list(enumerate(emails)) #tupla
 print("Tupla:", tupla, "\n ---- \n")
