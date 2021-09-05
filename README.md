@@ -30,7 +30,7 @@
 - Para acessar definir uma tupla:
 > usuarios = ()
 - Para setar valores em uma tupla:
-> usuarios = ((0, 'xpto@xyz.com'), (1, 'xkcd@phd.com'), (2, 'tester@teste.com')])
+> usuarios = ((0, 'xpto@xyz.com'), (1, 'xkcd@phd.com'), (2, 'tester@teste.com'))
 - Para acessar um valor na tupla
 > usuarios[0][0]
 
@@ -39,3 +39,49 @@ Tanto em listas "[]" como nas tuplas "()" acessamos os dados por meio dos índic
 Nos dicionários "{}" o acesso aos dados é feito por meio da chave associada a eles.
 Para adicionar elementos em um dicionário é preciso adicionar uma nova chave ao objeto a qual irá receber o valor do objeto.
 Já entre tuplas e listas, a diferença fica por conta da chave da tupla poder receber uma lista de valores.
+
+## Manipulando Arquivos
+- Para manipular arquvios utilize:
+> open("path/to/file.ext", modo)
+- Os modos podem ser: 
+  - 'r' - ler - open for reading (default)
+  - 'w' - escrever - open for writing, truncating the file first
+  - 'x' - Criar - open for exclusive creation, failing if the file already exists
+  - 'a' - Adicionar - open for writing, appending to the end of the file if it exists
+  - 'b' - return Binary - binary mode
+  - 't' - return String -text mode (default)
+  - '+' open for updating (reading and writing)
+- Os modos podem ser combinados, como 'rw'
+- utilize o comando abaixo para continuar no arquivo:
+> with open("path/to/file.ext", "a") as arquivo:
+- Caso não utilize o with, você será obrigado a fechar o arquivo com:
+> arquivo = open("path/to/file.ext") <br>
+> arquivo.write("meu texto") <br>
+> arquivo.close
+- Para ler uma linha
+> arquivo.readline(0)
+- Para ler todas as linhas
+> arquivo.readlines()
+
+## Manipulando String
+- Formas de manipular uma string. texto[ posicao inicial : quantidade de informação a percorrer : passo ]
+> texto = "Leia e Han Solo" <br>
+> texto[0:4] #leia <br>
+> texto[7:] #han solo <br>
+> texto[-8:] #han solo <br>
+> texto[::-1] #oloS naH e aieL <br>
+> texto[::2] #Li  a oo
+
+- Retonar uma lista 
+> texto.split(" ")
+
+- Encontrar uma string
+> texto.find("o")
+
+## Carregar JSON de um Arquivo
+- utilize"
+> json.load(open("path/to/file.ext", "r"))
+
+# Repositórios
+- [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/iris)
+- [Breaking Bad Api](https://breakingbadapi.com/documentation)
