@@ -79,9 +79,43 @@ Já entre tuplas e listas, a diferença fica por conta da chave da tupla poder r
 > texto.find("o")
 
 ## Carregar JSON de um Arquivo
-- utilize"
+- utilize
 > json.load(open("path/to/file.ext", "r"))
+
+## Geocode
+- Para utilizar a API do Google Maps é necessário:
+  - Instalar o PyGeocoder
+  - Acessar o Google Api Console(GAC)
+  - Criar um projeto no GAC
+  - Criar uma credencial para o projeto no GAC
+  - Gerar o token de acesso ao Projeto no GAC
+  - Passar o token nas requisições via PyGeocoder
+
+## Informações do Sistema
+- Para ter acesso a informações do sistema utilize a biblioteca "platform"
+> exemplo: <br>
+> import platform <br>
+> platform.processor() # retorna o tipo de processador da maquina
+
+## Informação de Usuário
+- Para ter acesso a informações do usuário do sistema, utilize a biblioteca "getpass"
+> exemplo: <br>
+> import getpass <br>
+> getpass.getuser() # retorna usuário logado
+
+## Informações de Data e Hora
+- Para ter acesso a informações de data e hora, utilize a biblioteca "datetime"
+> exemplo: <br>
+> from datetime import datetime
+> datetime.now() # data atual completa
+
+## Links Úteis
+- [Google Api Console](https://console.cloud.google.com/apis/dashboard)
 
 # Repositórios
 - [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/iris)
 - [Breaking Bad Api](https://breakingbadapi.com/documentation)
+
+# Dependências
+- [PyGeocoder - Geolocalização](https://pypi.org/project/pygeocoder/)
+- [Decouple - Environments Variables](https://pypi.org/project/python-decouple/)
