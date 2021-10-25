@@ -1,3 +1,60 @@
+# Primeiros Passos com Python
+
+# Objetivo
+- Apresentar exemplos de projetos e atividades utilizando conceitos introdutórios ao python e conhecer sua utilização.
+
+## Variaveis
+- Definir uma variavel em python é bem simples, basta em uma linha vazia, definir nossa variavel e setar um valor.
+> minha_variavel = 'hoje' <br>
+> minhaSegundaVariavel = 'amanhã' <br>
+> qualquercoisa = 'ontem' <br>
+> primeiro =  1
+> segundo = 2
+> eh_hoje = true
+
+- Observe o padrão empregado para definir uma variavel, note que sempre haverá o nome da variavel um simbolo de igual e o seu valor.
+- Veja nos exemplos abaixo formas incorretas de se definir uma variavel.
+> // <strong style="color:red">os exemplos abaixo são casos incorretos de definição de variavel </strong><br>
+> minha variavel  = 'hoje' // ira resultar em um erro por haver um espaço no nome da variavel <br>
+> MinhaSegundaVariavel = 'amanhã' // pelos padrões de definição de varaiveis essa definição está errada <br> 
+> éhoje = true // é errado esse tipo de definição, pois não devemos utilizar um acento ou caractere especial no nome da variavel<br>
+> primerio == 1 // é errado, só se usa 2 iguais juntos (==) quando se está querendo comparar os valores para saber se é verdadeiro ou falso
+
+## Decisões
+- Iremos destacar 3 tipos de decisões e explanar cada caso.
+- IF | utilizado para inciar toda condição de comparação. Em pt-br é o mesmo de 'SE'.
+> total = 10 <br>
+> if(total == 10): // podemos ler esse caso como: Se Total for igual a 10 então será feito o que está dentro da decisão 
+- ELIF | utilizado após a primeira condição de IF, para então tentar uma segunda condição. Em pt-br é o mesmo que 'SENÃO, ENTÃO É'
+> total = 11 <br>
+> if(total == 10): <br>
+>   ...<br>
+> elif(total == 11): // podemos ler esse caso como: Se Total for igual a 11 então será feito o que está dentro da decisão<br>
+- ELSE | Diferente dos outros casos, é uma condição onde pode ser qualquer coisa menos as validadas anteriormente, é o resto que não foi validado. Em pt-br é o mesmo de 'SENÃO'
+> total = 110032 <br>
+> if(total == 10): <br>
+>   ...<br>
+> elif(total == 11):<br> 
+>   ...<br>
+> > elif(total == 12):<br> 
+>   ...<br>
+> else: // não necessita de comparação, é o resto do que não foi decidido durante os if e elif
+
+## Loop
+- Para loop temos o While e o For
+- O while é executado enquanto for verdade a situação definida nele
+> doenca_infectocontagiosa != "SIM" and doenca_infectocontagiosa != "NAO":
+- O for será executado enquanto houver valores em uma lista que foi definida em sua criação
+> for valor in range(1,11,1):
+> 
+## Funções
+- Toda função é defina pelo termo 'def' e pode receber quantos parametros for necessário. 
+- Uma função pode ou não ter retorno.
+- Uma função pode ser chamada a qualquer momento.
+- Em caso a função esteja em outro script é fundamental que ela seja importada no script.
+> def excluirTodos(lista): <br>
+> ... <br>
+> return "Itens excluídos." <br>
 
 
 ## Listas
@@ -108,6 +165,15 @@ Já entre tuplas e listas, a diferença fica por conta da chave da tupla poder r
 > exemplo: <br>
 > from datetime import datetime
 > datetime.now() # data atual completa
+
+## Socket 
+- Permitindo a comunicação via protocolos UDP ou TCP foi possivel abrir um canal de comunicação entre 2 servidores distintos.
+- Todas as comunicações são realizadas através do import:
+> from socket import *
+
+## Portas Serial
+- Permite lista as portas de comunicação no computador através do import:
+> from serial.tools import list_ports
 
 ## Links Úteis
 - [Google Api Console](https://console.cloud.google.com/apis/dashboard)
